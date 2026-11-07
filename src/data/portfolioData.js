@@ -10,7 +10,7 @@ export const candidateInfo = {
   location: "Visakhapatnam, India",
   summary: "Highly motivated Computer Science graduate with a solid foundation in Java, C, SQL, and object-oriented design. Experienced in developing scalable systems, cloud-native applications, and implementing REST APIs. Skilled in applying data structures and algorithms to solve real-world problems efficiently, with a keen interest in distributed computing and modern software engineering.",
   availability: "Available for Software Engineering & Cloud Roles",
-  image: "/profile.jpg",
+  image: "/profile.jpg?v=2",
   // Privacy notice: Phone and personal email are not published publicly per user instructions.
   contactPlaceholders: {
     email: "[Available upon request]",
