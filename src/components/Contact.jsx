@@ -94,12 +94,19 @@ export default function Contact() {
             {/* Social Placeholder Box */}
             <div className="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 shadow-xs">
               <span className="text-[11px] uppercase font-bold tracking-wider text-slate-400 block mb-2">
-                External Profiles (Pending Confirmation)
+                External Profiles
               </span>
               <ul className="space-y-1.5 text-xs font-mono text-slate-500 dark:text-slate-400">
                 <li className="flex items-center justify-between py-1 border-b border-slate-100 dark:border-slate-800">
                   <span>GitHub:</span>
-                  <span className="text-slate-400">{candidateInfo.contactPlaceholders.github}</span>
+                  <a
+                    href={candidateInfo.contactPlaceholders.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 dark:text-blue-400 hover:underline"
+                  >
+                    LOKESHNAGENDRAKUMAR
+                  </a>
                 </li>
                 <li className="flex items-center justify-between py-1">
                   <span>LinkedIn:</span>

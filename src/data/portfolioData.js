@@ -14,7 +14,7 @@ export const candidateInfo = {
   // Privacy notice: Phone and personal email are not published publicly per user instructions.
   contactPlaceholders: {
     email: "[Available upon request]",
-    github: "[Add GitHub URL]",
+    github: "https://github.com/LOKESHNAGENDRAKUMAR",
     linkedin: "[Add LinkedIn URL]",
   }
 };

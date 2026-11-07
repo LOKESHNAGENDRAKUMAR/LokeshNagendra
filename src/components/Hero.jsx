@@ -59,14 +59,19 @@ export default function Hero() {
             {/* Verified Social Link Placeholders */}
             <div className="pt-3 border-t border-slate-200/70 dark:border-slate-800/70">
               <span className="text-xs uppercase font-bold tracking-wider text-slate-400 block mb-2">
-                Profile Links (Pending Confirmation)
+                External Profiles
               </span>
               <div className="flex flex-wrap items-center gap-2.5">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-dashed border-slate-300 dark:border-slate-700">
+                <a
+                  href={candidateInfo.contactPlaceholders.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-900 text-slate-800 dark:text-slate-200 hover:text-blue-600 dark:hover:text-blue-400 border border-slate-300 dark:border-slate-700 transition-colors"
+                >
                   <GithubIcon size={14} />
-                  <span>{candidateInfo.contactPlaceholders.github}</span>
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-400 border border-dashed border-slate-300 dark:border-slate-700">
+                  <span>github.com/LOKESHNAGENDRAKUMAR</span>
+                </a>
+                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-mono font-medium bg-slate-100 dark:bg-slate-900 text-slate-500 dark:text-slate-400 border border-dashed border-slate-300 dark:border-slate-700">
                   <LinkedinIcon size={14} />
                   <span>{candidateInfo.contactPlaceholders.linkedin}</span>
                 </span>
