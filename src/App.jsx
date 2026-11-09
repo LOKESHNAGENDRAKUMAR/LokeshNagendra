@@ -17,7 +17,7 @@ export default function App() {
       if (savedTheme) {
         return savedTheme === 'dark';
       }
-      return false; // clean, restrained light background by default as requested in prompt
+      return false;
     }
     return false;
   });
@@ -34,7 +34,7 @@ export default function App() {
   }, [darkMode]);
 
   return (
-    <div className="min-h-screen bg-white text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200">
+    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 bg-grid-pattern transition-colors duration-200">
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <main>
         <Hero />

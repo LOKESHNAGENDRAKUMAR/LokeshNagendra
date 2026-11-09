@@ -12,14 +12,55 @@
 
   /* Accessible focus indicators */
   :focus-visible {
-    outline: 2px solid #2563eb;
+    outline: 2px solid #3b82f6;
     outline-offset: 2px;
   }
 }
 
-/* Restrained scrollbar */
+/* Custom background grid pattern */
+.bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(51, 65, 85, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.25) 1px, transparent 1px);
+}
+
+/* Glassmorphism helpers */
+.bento-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dark .bento-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+.bento-card:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.12);
+}
+
+.dark .bento-card:hover {
+  border-color: rgba(99, 102, 241, 0.5);
+  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+}
+
+/* Sleek subtle scrollbar */
 ::-webkit-scrollbar {
-  width: 7px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
