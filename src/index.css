@@ -4,78 +4,87 @@
   html {
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     scroll-behavior: smooth;
+    background-color: #0c0d12;
+    color: #f8fafc;
   }
   
   code, pre {
     font-family: 'JetBrains Mono', monospace;
   }
 
-  /* Accessible focus indicators */
+  /* Accessible focus rings */
   :focus-visible {
-    outline: 2px solid #3b82f6;
-    outline-offset: 2px;
+    outline: 2px solid #ff5252;
+    outline-offset: 3px;
   }
 }
 
-/* Custom background grid pattern */
-.bg-grid-pattern {
-  background-size: 32px 32px;
+/* Anime.js Dark Technical Background Grid */
+.anime-grid-bg {
+  background-color: #0c0d12;
   background-image: 
-    linear-gradient(to right, rgba(148, 163, 184, 0.08) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    radial-gradient(circle at 50% 0%, rgba(255, 75, 75, 0.08) 0%, transparent 60%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
 }
 
-.dark .bg-grid-pattern {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(51, 65, 85, 0.25) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(51, 65, 85, 0.25) 1px, transparent 1px);
+/* Anime.js Signature Gradient */
+.anime-gradient-text {
+  background: linear-gradient(135deg, #ff4b4b 0%, #ff7a59 40%, #a855f7 85%, #6366f1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* Glassmorphism helpers */
-.bento-card {
-  background: rgba(255, 255, 255, 0.85);
+.anime-gradient-border {
+  border-image: linear-gradient(to right, #ff4b4b, #a855f7) 1;
+}
+
+/* Card with Anime.js Technical Aesthetic */
+.anime-card {
+  background: rgba(18, 19, 26, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  position: relative;
+  transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.dark .bento-card {
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(51, 65, 85, 0.6);
+.anime-card:hover {
+  border-color: rgba(255, 75, 75, 0.4);
+  background: rgba(22, 23, 32, 0.9);
+  box-shadow: 0 12px 36px -8px rgba(255, 75, 75, 0.15);
+  transform: translateY(-2px);
 }
 
-.bento-card:hover {
-  border-color: rgba(99, 102, 241, 0.5);
-  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.12);
+/* Interactive Ripple Dot Canvas */
+.ripple-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.15);
+  transition: background-color 0.2s ease;
+  transform-origin: center center;
 }
 
-.dark .bento-card:hover {
-  border-color: rgba(99, 102, 241, 0.5);
-  box-shadow: 0 10px 30px -10px rgba(99, 102, 241, 0.2);
+.ripple-dot:hover {
+  background: #ff4b4b;
 }
 
-/* Sleek subtle scrollbar */
+/* Sleek technical scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0c0d12;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
+  background: #27272a;
   border-radius: 9999px;
 }
 
-.dark ::-webkit-scrollbar-thumb {
-  background: #334155;
-}
-
 ::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+  background: #ff4b4b;
 }

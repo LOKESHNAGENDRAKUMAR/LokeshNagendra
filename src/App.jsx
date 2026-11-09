@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -11,31 +11,9 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 export default function App() {
-  const [darkMode, setDarkMode] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('portfolio-theme');
-      if (savedTheme) {
-        return savedTheme === 'dark';
-      }
-      return false;
-    }
-    return false;
-  });
-
-  useEffect(() => {
-    const root = document.documentElement;
-    if (darkMode) {
-      root.classList.add('dark');
-      localStorage.setItem('portfolio-theme', 'dark');
-    } else {
-      root.classList.remove('dark');
-      localStorage.setItem('portfolio-theme', 'light');
-    }
-  }, [darkMode]);
-
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 bg-grid-pattern transition-colors duration-200">
-      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+    <div className="min-h-screen bg-[#0c0d12] text-slate-100 anime-grid-bg selection:bg-[#ff4b4b] selection:text-white">
+      <Navbar />
       <main>
         <Hero />
         <About />
